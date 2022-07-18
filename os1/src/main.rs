@@ -20,6 +20,7 @@ fn clear_bss() {
     (sbss as usize..ebss as usize).for_each(|a| unsafe { (a as *mut u8).write_volatile(0) });
 }
 
+
 #[no_mangle]
 pub fn rust_main() -> ! {
     extern "C" {
